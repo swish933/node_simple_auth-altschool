@@ -1,0 +1,32 @@
+[
+    {
+        "username": "John42",
+        "email": "john42@gmail.com",
+        "password": "sdhsdjahh2u_443",
+        "role": "admin"
+    },
+    {
+        "username": "Yemi23",
+        "email": "yemi@gmail.com",
+        "password": "xPLosiVE23",
+        "role": "reader"
+    },
+    {
+        "username": "LanternPublishers",
+        "email": "lanternpublishers@gmail.com",
+        "password": "kersoene_is_expensive_24",
+        "role": "publisher"
+    },
+    {
+        "username": "Faith97",
+        "email": "faith@gmail.com",
+        "password": "gdssdjsnk_978",
+        "role": "reader"
+    },
+    {
+        "username": "UniversityPress",
+        "email": "john42@gmail.com",
+        "password": "sdhsdjahh2u_223",
+        "role": "publisher"
+    }
+]
