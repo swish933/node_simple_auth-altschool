@@ -8,15 +8,31 @@ const booksRouter = (req, res, method) => {
 			break;
 
 		case "POST":
-			authenticateUser(req, res, booksControllers.addBook);
+			authenticateUser(req, res)
+				.then(() => booksControllers.addBook(req, res))
+				.catch((err) => {
+					res.writeHead(400);
+					res.end(err);
+				});
 			break;
 
 		case "PUT":
-			authenticateUser(req, res, booksControllers.updateBook);
+			authenticateUser(req, res)
+				.then(() => booksControllers.updateBook(req, res))
+				.catch((err) => {
+					res.writeHead(400);
+					res.end(err);
+				});
+
 			break;
 
 		case "DELETE":
-			authenticateUser(req, res, booksControllers.deleteBook);
+			authenticateUser(req, res)
+				.then(() => booksControllers.deleteBook(req, res))
+				.catch((err) => {
+					res.writeHead(400);
+					res.end(err);
+				});
 			break;
 
 		default:
@@ -36,13 +52,31 @@ const authorsRouter = (req, res, method) => {
 			return authorsControllers.getAllAuthors(req, res);
 
 		case "POST":
-			authenticateUser(req, res, authorsControllers.addAuthor);
+			authenticateUser(req, res)
+				.then(() => authorsControllers.addAuthor(req, res))
+				.catch((err) => {
+					res.writeHead(400);
+					res.end(err);
+				});
+			break;
 
 		case "PUT":
-			authenticateUser(req, res, authorsControllers.updateAuthor);
+			authenticateUser(req, res)
+				.then(() => authorsControllers.updateAuthor(req, res))
+				.catch((err) => {
+					res.writeHead(400);
+					res.end(err);
+				});
+			break;
 
 		case "DELETE":
-			authenticateUser(req, res, authorsControllers.deleteAuthor);
+			authenticateUser(req, res)
+				.then(() => authorsControllers.deleteAuthor(req, res))
+				.catch((err) => {
+					res.writeHead(400);
+					res.end(err);
+				});
+			break;
 
 		default:
 			res.writeHead(404);
